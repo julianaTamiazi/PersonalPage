@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Juliana Final Project</title>
+    <link rel="stylesheet" href="css/personal.css">
+</head>
+<body>
+    <h1>Personal</h1>
+
+    <p>
+        <strong>Hobbies</strong> are the most important part of a person, through them is possible to know a lot about a person. 
+        Let's take a look on my hobbies!!
+    </p>
+    
+    <!--this is a coment-->
+
+    <h2 id="first">Gastronomy</h2>
+    <figure id="gastronomy">
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <img src="img/gastronomy.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="img/gastronomy1.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="img/gastronomy2.jpg" style="width:100%">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>  <!-- The "<" character -->
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>   <!-- The ">" character -->
+
+        </div>
+        <br>
+        <script>
+            var slideIndex = 1;     // slides indexed from 1
+            showSlides(slideIndex);
+
+            var timeout = null;
+            timeout = setTimeout(automaticChange, 7000);  // To avoid automatic change, comment this line
+
+            function plusSlides(n) {
+                slideIndex += n;
+                showSlides(slideIndex);
+                /* if automaticChange is on, reset the timer */
+                if (timeout !== null) {
+                    clearTimeout(timeout);
+                    timeout = setTimeout(automaticChange, 7000);
+                }
+            }
+
+            function currentSlide(n) {
+                slideIndex = n
+                showSlides(slideIndex);
+                /* if automaticChange is on, reset the timer */
+                if (timeout !== null) {
+                    clearTimeout(timeout);
+                    timeout = setTimeout(automaticChange, 7000);
+                }
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                if (n > slides.length) { slideIndex = 1 }   // if beyond the last one, go to the first one
+                if (n < 1) { slideIndex = slides.length }   // if before the first one, go to the last one
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slides[slideIndex - 1].style.display = "block";
+                            }
+
+            function automaticChange() {
+                slideIndex++;
+                showSlides(slideIndex);
+                timeout = setTimeout(automaticChange, 7000);   // call again automaticChange() after 7s
+            }
+        </script>
+    </figure>
+
+    <p>
+        Food, a very pleasurable activity. It is possible to know a whole world throught the gastronomy of different 
+        countries. I fortunately could go around in my city trying delicious meals!!
+    </p>
+
+    
+    <h2 id="second">Puzzle</h2>
+    <figure id="puzzle">
+        <img src="img/puzzle.jpg" alt="Puzzle picture">
+    </figure>
+
+    <p>
+        The best activity to keep your brain healthy and also an intertreinement!!! I have assembled dozens of them
+        and use them as decoration. Puzzle also brings me amazing memories!!
+    </p>
+    
+    <h2 id="thrid">Ice Skating</h2>
+    <figure id="iceskating">
+        <img src="img/iceskating.jpg" alt="IceSkating picture"> 
+    </figure>
+
+    <p>
+        One of my favority sports. A good way to enjoy the winter while doing some physical activity. 
+    </p>
+
+    </body>
+</html>

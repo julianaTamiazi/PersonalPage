@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" /> <!--to ajuste the page to the screen device-->
+    <title>Juliana Final Project</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">  <!--media="(min-width:480px)" or media="screen" to ajuste the page to the screen device-->
+    <script>
+        function validateForm() {
+            var x = document.forms["myForm"]["fname"].value;
+            if (x == "") {
+                alert("First name must be filled out");
+                return false;
+            }
+            x = document.forms["myForm"]["lname"].value;
+            if (x == "") {
+                alert("Last name must be filled out");
+                return false;
+            }
+            x = document.forms["myForm"]["message"].value;
+            if (x == "") {
+                alert("Message must be filled out");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <header class="container">
+        <h1>Juliana Tamiazi Correa</h1> <!--to identify the logo as the title's page-->
+        <nav class="menu-options">
+            <ul>
+                <li><a href="#Profile">Profile</a></li>
+                <li><a href="#Professional">Professional</a></li>
+                <li><a href="Personal.html">Personal</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="container highlight">
+            <section class="banner-highlight">
+                <figure>
+                    <img src="img/1.jpg" alt="Juliana Picture" />
+                </figure>
+            </section>
+        </div>
+        <div class="description">
+            <p>Dynamic person, punctual, good interpersonal relationship and with experience in teamwork</p>
+        </div>
+        <div class="container panels">
+            <section class="panel profile">
+                <h2 id="Profile">Profile</h2>
+                <ul>
+                    <li>Studies at <a href="https://www.collegelasalle.com/" target="_blank">LaSalle College | Montreal</a></li>
+                    <li>Lives in <a href="https://www.google.com/maps?q=Montreal" target="_blank">Montreal, Quebec</a></li>
+                    <li>From <a href="https://www.google.com/maps?q=Sao+Paulo" target="_blank">São Paulo, Brazil</a></li>
+                </ul>
+            </section>
+            <section class="panel professional">
+                <h2 id="Professional">Professional</h2>
+                <h3>Academic Qualifications</h3>
+                <ol>
+                    <li>Computer Science Technology - Specialization in Administrative Data Processing; 2017 - 2020 </li>
+                    <li>Diplome in Pharmacy and Biochemistry; 2007</li>
+                </ol>
+                <h3>Professional Experiences</h3>
+                <ol>
+                    <li>Store Associate; 2019</li>
+                    <li>Customer Service Supervisor; 2007-2016</li>
+                    <li>Receptionist; 2004-2004</li>
+                </ol>
+                <h3><a href="Docs/Curriculum Vitae2.docx">Curriculum Vitae</a></h3>
+            </section>
+            <section class="panel contact">
+                <h2 id="Contact">Contact</h2>
+                <p>Please, send a message for more information</p>
+                <form name="myForm" action="action_page.html" onsubmit="return validateForm()" method="get">
+                    <label for="firstName">First name:</label><input type="text" name="fname" maxlength="25"> <br />
+                    <label for="lastName">Last name:</label><input type="text" name="lname" maxlength="25"> <br />
+                    <label for="message">Message:</label><textarea rows="3" cols="21" name="message" ></textarea> <br /><br />
+                    <input type="submit" value="Submit">
+                </form>
+                <ol>
+                    <li>
+                        <a href="http://facebook.com/Jutamiazi" target="_blank">Facebook</a>
+                    </li>
+                    <li>
+                        <a href="https:/www.linkedin.com/in/juliana-tamiazi-55038ab0" target="_blank">Linkedin</a>
+                    </li>
+                    <li>
+                        <a href="mailto:biju.juli@gmail.com">
+                            <img class="email" src="img/email.png" />
+                        </a>
+                    </li>
+                </ol>
+            </section>
+        </div>
+        </header>
+        <footer>
+            <div class="container">
+                &copy; Copyright Juliana Tamiazi Correa
+            </div>
+        </footer>
+</body>
+</html>
